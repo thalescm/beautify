@@ -1,11 +1,15 @@
 // web.js
 var express = require("express");
 var app = express();
+var router = express.Router();
+var path = require('path');
 
-
-app.get('/', function(req, res) {
-  res.send('Hello World!');
+/* GET home page. */
+router.get('/', function(req, res) {
+  res.render('index', { title: 'Beautify' });
 });
+
+app.use('/', router);
 
 var port = Number(process.env.PORT || 5000);
 
