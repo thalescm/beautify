@@ -9,6 +9,9 @@
   "repository": "",
   "author": "Thales Machado",
   "license": "MIT",
+  "dependencies": {
+      "express": "2.5.x"
+  },
   "engines": {
         "node": "0.8.22"
     }
