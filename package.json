@@ -1,0 +1,15 @@
+{
+  "name": "beautify",
+  "version": "0.0.1",
+  "description": "Encontre o melhor salão de beleza para você, agende um horário e desfrute da facilidade de marcar seu corte de cabelo, manicure ou pedicure.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Thales Machado",
+  "license": "MIT",
+  "engines": {
+        "node": "0.8.22"
+    }
+}
