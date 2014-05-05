@@ -23,8 +23,7 @@
 function openCell(cell) {
 	
 	cell.animate({
-			properties:{y:cell.superView.y},
-			curve: "spring(1000,15,500)"
+			properties:{y: cell.superView.y - 100}
 	});
 }
 
@@ -33,8 +32,14 @@ function openCell(cell) {
 for (var index in PSD["List scroll"].subViews) {
 
 	var cell = PSD["List scroll"].subViews[index];
-	debugger;
 	cell.on("click", function(ev) {
+
+		for (var index in PSD["List scroll"].subViews) {
+			var otherCell = PSD["List scroll"].subViews[index];
+			otherCell.visible = false;
+		}
+
+		cell.visible = true;
 		openCell(cell);
 	});
 }
