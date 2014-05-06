@@ -30,16 +30,25 @@ function openCell(cell) {
 	cell.visible = true;
 
 	var lastPosition = cell.y;
-	
+
 	cell.animate({
-			properties:{y: (PSD["List scroll"].scrollPoint + 25)}
+			properties:{y: (PSD["List scroll"].scrollPoint)},
+			curve: "spring(100,10,500)",
+			time: 1000
 	});
+
+	PSD[cell.name + "Bg"].animate({
+		properties:{height: 900},
+		time: 100
+	})
 
 	PSD["List scroll"].scrollVertical = false;
 
-	cell.once("click", function(ev) {
+	PSD["BackIcon"].once("click", function(ev) {
 		closeCell(cell, lastPosition);
 	});
+
+	PSD["BackIcon"].visible = true;
 }
 
 // Simple reusable function that binds a bounce to a click on a view
@@ -47,20 +56,29 @@ function closeCell(cell, lastPosition) {
 
 	animation1 = new Animation({
 		view: cell,
-		properties:{y: lastPosition}
+		properties:{y: lastPosition},
+		curve: "spring(100,10,500)"
 	});
 
-	animation1.on("end", function() {
-		for (var index in PSD["List scroll"].subViews) {
-				var otherCell = PSD["List scroll"].subViews[index];
-				otherCell.visible = true;
-		}
+	for (var index in PSD["List scroll"].subViews) {
+			var otherCell = PSD["List scroll"].subViews[index];
+			otherCell.visible = true;
+	}
 
+	animation1.on("end", function() {
 		PSD["List scroll"].scrollVertical = true;
 		configureCell(cell);
 	});
 
+
+	PSD["BackIcon"].visible = false;
+
 	animation1.start();
+
+	PSD[cell.name + "Bg"].animate({
+		properties:{height: 193},
+		time: 100
+	})
 }
 
 function configureCell(cell) {
@@ -76,6 +94,8 @@ for (var index in PSD["List scroll"].subViews) {
 }
 
 console.log(PSD);
+
+PSD["BackIcon"].visible = false;
 
 PSD["AjustesGray"].visible = true;
 PSD["AjustesPink"].visible = false;
