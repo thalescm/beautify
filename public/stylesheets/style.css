@@ -15,3 +15,8 @@ body {
   width: 0px;
   height: 0px;
 }
+
+.framer { display: block; visibility: visible;  position: absolute; top:auto; right:auto; bottom:auto; left:auto; width:auto; height:auto;  overflow: visible;  z-index: 0; opacity: 1; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-transform-origin: 50% 50% 0%; -webkit-transform-style: flat;  -webkit-backface-visibility: hidden;}
+
+.framer-template-positioned { width: 640px; height: 1136px; position: absolute; left: 142.5217391304348px; top: 134.12608695652176px; -webkit-transform: scale(0.41086956521739126); -webkit-transform-origin: 0 0; overflow: hidden;  }
+

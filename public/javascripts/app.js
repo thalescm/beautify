@@ -21,27 +21,58 @@
 
 // Simple reusable function that binds a bounce to a click on a view
 function openCell(cell) {
+
+	for (var index in PSD["List scroll"].subViews) {
+		var otherCell = PSD["List scroll"].subViews[index];
+		otherCell.visible = false;
+	}
+
+	cell.visible = true;
+
+	var lastPosition = cell.y;
 	
 	cell.animate({
-			properties:{y: cell.superView.y - 100}
+			properties:{y: (PSD["List scroll"].scrollPoint + 25)}
+	});
+
+	PSD["List scroll"].scrollVertical = false;
+
+	cell.once("click", function(ev) {
+		closeCell(cell, lastPosition);
+	});
+}
+
+// Simple reusable function that binds a bounce to a click on a view
+function closeCell(cell, lastPosition) {
+
+	animation1 = new Animation({
+		view: cell,
+		properties:{y: lastPosition}
+	});
+
+	animation1.on("end", function() {
+		for (var index in PSD["List scroll"].subViews) {
+				var otherCell = PSD["List scroll"].subViews[index];
+				otherCell.visible = true;
+		}
+
+		PSD["List scroll"].scrollVertical = true;
+		configureCell(cell);
+	});
+
+	animation1.start();
+}
+
+function configureCell(cell) {
+	cell.once("click", function(ev) {
+		openCell(cell);
 	});
 }
 
 
 // Loop through all the exported views
 for (var index in PSD["List scroll"].subViews) {
-
-	var cell = PSD["List scroll"].subViews[index];
-	cell.on("click", function(ev) {
-
-		for (var index in PSD["List scroll"].subViews) {
-			var otherCell = PSD["List scroll"].subViews[index];
-			otherCell.visible = false;
-		}
-
-		cell.visible = true;
-		openCell(cell);
-	});
+	configureCell(PSD["List scroll"].subViews[index]);
 }
 
 console.log(PSD);
