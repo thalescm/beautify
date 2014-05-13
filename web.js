@@ -1,7 +1,10 @@
 // web.js
 var express = require("express");
-var router = express.Router();
 var path = require('path');
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
+
 
 var app = express();
 
@@ -13,12 +16,21 @@ app.set("view options", {layout: false});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-/* GET home page. */
-router.get('/', function(req, res) {
+// ###################### //
+
+/* GET index page. */
+app.get('/', function(req, res) {
   res.render('index', { title: 'Beautify' });
 });
 
-app.use('/', router);
+app.get('/home', function(req, res) {
+  res.render('home', { title: 'Agendar' });
+});
+
+app.get('/salao', function(req, res) {
+  res.render('salao-escolhido', { title: 'Salao' });
+});
+
 
 var port = Number(process.env.PORT || 5000);
 

@@ -1,0 +1,59 @@
+{"docName":"app_salao_chosen","path":"~/Documents/Thales%20Machado/Design/AppSalao/app_salao_chosen","relativeImagePath":"images","imagePath":"~/Documents/Thales%20Machado/Design/AppSalao/app_salao_chosen/images","framerPath":"~/Documents/Thales%20Machado/Design/AppSalao/app_salao_chosen/framer","viewInfoPath":"~/Documents/Thales%20Machado/Design/AppSalao/app_salao_chosen/framer/views.app_salao_chosen.js","logPaths":["/tmp/framerps.log","~/Documents/Thales%20Machado/Design/AppSalao/app_salao_chosen/framer/framerps.log"]}
+
+Running for ~/Documents/Thales%20Machado/Design/AppSalao/app_salao_chosen
+Could not read data file
+Agendar_Cell_Chosen: Calculating vector mask bounds
+StatusBarWhite: Exporting image
+Signal & Carrier: Exporting image
+PROGRESS: 12.5
+Battery: Exporting image
+PROGRESS: 16.6666666666667
+PROGRESS: 16.6666666666667
+Header: Exporting image
+BackIcon: Exporting image
+PROGRESS: 25
+PROGRESS: 25
+TabBar: Exporting image
+AjustesPink: Exporting image
+PROGRESS: 33.3333333333333
+AjustesGray: Exporting image
+PROGRESS: 37.5
+HistoricoPink: Exporting image
+PROGRESS: 41.6666666666667
+HistoricoGray: Exporting image
+PROGRESS: 45.8333333333333
+AgendarPink: Exporting image
+PROGRESS: 50
+AgendarGray: Exporting image
+PROGRESS: 54.1666666666667
+PROGRESS: 54.1666666666667
+List scroll: Exporting image
+List scroll: Calculating vector mask bounds
+SaloonCell3: Exporting image
+PROGRESS: 66.6666666666667
+SaloonCell2: Exporting image
+PROGRESS: 70.8333333333333
+SaloonCell1: Exporting image
+PROGRESS: 75
+SaloonRating: Exporting image
+PROGRESS: 79.1666666666667
+SaloonCarIocn: Exporting image
+PROGRESS: 83.3333333333333
+SaloonAddress: Exporting image
+PROGRESS: 87.5
+SaloonImage: Exporting image
+PROGRESS: 91.6666666666667
+SaloonBg: Exporting image
+PROGRESS: 95.8333333333333
+PROGRESS: 95.8333333333333
+PROGRESS: 95.8333333333333
+Backgrounds: Exporting image
+PROGRESS: 100
+PROGRESS: 100
+24 views changed
+Writing ~/Documents/Thales%20Machado/Design/AppSalao/app_salao_chosen/index.html
+Writing ~/Documents/Thales%20Machado/Design/AppSalao/app_salao_chosen/app.js
+Writing ~/Documents/Thales%20Machado/Design/AppSalao/app_salao_chosen/framer/framer.js
+Writing ~/Documents/Thales%20Machado/Design/AppSalao/app_salao_chosen/framer/framerps.js
+
+SUCCESS: ~/Documents/Thales Machado/Design/AppSalao/app_salao_chosen
