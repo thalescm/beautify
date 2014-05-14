@@ -1,8 +1,13 @@
 extends layout
 
 block content
-    h1 Bem vindo ao super site!
-    p(style="width:100%; height:50px; border: 1px solid yellow")
-        a(href="/home") Home Screen
-    p(style="width:100%; height:50px; border: 1px solid yellow")
-        a(href="/salao") Home Screen
+
+    .content
+
+        h1 Escolha o Layout que você deseja ver
+
+        ul
+            li
+                a(href="/home") Home
+            li
+                a(href="/salao") Salao escolhido

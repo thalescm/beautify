@@ -5,9 +5,10 @@
   -webkit-user-select:none;
 }
 body {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFMzMzDBMatgEYWQAAABhJREFUeNpiYIADRjhgGNKCw8UfcAAQYACltADJ8fw9RwAAAABJRU5ErkJggg==);
-  font: 28px/1em "Helvetica";
+  /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFMzMzDBMatgEYWQAAABhJREFUeNpiYIADRjhgGNKCw8UfcAAQYACltADJ8fw9RwAAAABJRU5ErkJggg==);*/
+  background-color: black;
   color: #FFF;
+
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-perspective: 1000px;
 }
@@ -20,3 +21,29 @@ body {
 
 .framer-template-positioned { width: 640px; height: 1136px; position: absolute; left: 142.5217391304348px; top: 134.12608695652176px; -webkit-transform: scale(0.41086956521739126); -webkit-transform-origin: 0 0; overflow: hidden;  }
 
+
+.content {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.content > h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size:50px;
+}
+
+.content > ul > li > a{
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  border: 1px solid #ef317c;
+  width: 80%;
+  margin: 20px auto;
+  font-size:30px;
+}
+
+.content > ul > li > a:hover{
+  border: 1px solid #1eff38;
+}
